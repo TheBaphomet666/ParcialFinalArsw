@@ -4,11 +4,11 @@ var FrontEndModule =(function(){
         Convert: async function(callback){
 
             if(document.getElementById('func').value=='CelsiusToFahrenheit'){
-                BackEndModule.CelsiusToFahrenheit();
+                BackEndModule.CelsiusToFahrenheit(document.getElementById('value').value);
             }
             else if(document.getElementById('func').value=='FahrenheitToCelsius'){
 
-                BackEndModule.FahrenheitToCelsius();
+                BackEndModule.FahrenheitToCelsius(document.getElementById('value').value);
 
             }
             //console.log(document.getElementById('func').value);

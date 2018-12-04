@@ -1,9 +1,9 @@
 var BackEndModule =(function(){
 
     return{
-        CelsiusToFahrenheit: async function(callback){
+        CelsiusToFahrenheit: async function(value){
 
-            await Promise.resolve(axios.get('/Converter/celsius/'+document.getElementById('value').value))
+            await Promise.resolve(axios.get('/Converter/celsius/'+value))
                 .then(async function(response){
                         //console.log(response.data);
                         FrontEndModule.refresh(response.data);
@@ -12,9 +12,9 @@ var BackEndModule =(function(){
 
                     }
                 )},
-        FahrenheitToCelsius: async function(callback){
+        FahrenheitToCelsius: async function(value){
 
-                    await Promise.resolve(axios.get('/Converter/fahrenheit/'+document.getElementById('value').value))
+                    await Promise.resolve(axios.get('/Converter/fahrenheit/'+value))
                         .then(async function(response){
                                 //console.log(response.data);
                                 FrontEndModule.refresh(response.data);
