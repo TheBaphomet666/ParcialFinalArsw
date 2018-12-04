@@ -24,7 +24,7 @@ public class ConverterController {
 
     @RequestMapping(value = "/celsius/{value}",method = RequestMethod.GET)
     public Data ConvertCelsiusToFahrenheit( @PathVariable("value") double value){
-        Data json = new Data("CelsiusToFahrenheit",value,con.FahrenheitToCelsius(value));
+        Data json = new Data("CelsiusToFahrenheit",value,con.CelsiusToFahrenheit(value));
         System.out.println(json);
         return json;
     }
