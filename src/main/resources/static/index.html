@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+</head>
+
+<body id="page-top">
+
+
+
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Converter</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">There you can convert Celsius degrees to Fahrenheit and viceversa.</h2>
+        </div>
+    </div>
+</header>
+
+<!-- Stock Section -->
+<section id="Stock" class="about-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-white mb-4">Converter</h2>
+                <input id="value" type="number" class="form-control" value="0">
+                <div class="container">
+                    <h2 class="text-white mb-4">Select The functon:</h2>
+                    <div class="form-group">
+                        <select class="form-control" id="func">
+                            <option>CelsiusToFahrenheit</option>
+                            <option>FahrenheitToCelsius</option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-dark" onclick="FrontEndModule.Convert()">Convert</button>
+            </div>
+        </div>
+        <p class="text-white mb-4" id="data"></p>
+    </div>
+</section>
+
+
+
+
+<script src="js/BackEnd.js"></script>
+<script src="js/FrontEnd.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
